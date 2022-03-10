@@ -1,11 +1,10 @@
 on:
-  pull_request:
   push:
     branches:
       - master
 jobs:
-  build:
-    name: build the project
+  Install:
+    name: install the packages
     runs-on: ubuntu-latest
   steps:
      - uses: actions/checkout@v2
@@ -13,5 +12,4 @@ jobs:
        with: node-version: '14'
     name: Install
     run: npm install
-    name: build
-    run: npm run build
+    
